@@ -4,13 +4,14 @@ window.addEventListener("load", () => {
   let tempDescription = document.querySelector(".temperature-description");
   let tempDegree = document.querySelector(".temperature-degree");
   let locationTimezone = document.querySelector(".location-timezone");
+  const apiKey = config.WEATHER_API_KEY;
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       long = position.coords.longitude;
       lat = position.coords.latitude;
 
-      const api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=3d6312c39356f4206a804e00960992c1`;
+      const api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${apiKey}`;
 
       fetch(api)
         .then((response) => {
