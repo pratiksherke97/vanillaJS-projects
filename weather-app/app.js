@@ -21,11 +21,12 @@ window.addEventListener("load", () => {
           console.log(data);
           const { temp } = data.current;
           const { description } = data.current.weather[0];
+          const timezone = data.timezone;
 
           //Update DOM elements from API.
           tempDegree.textContent = temp;
           tempDescription.textContent = description;
-          locationTimezone = data.timezone;
+          locationTimezone.textContent = timezone;
         });
     });
   }
