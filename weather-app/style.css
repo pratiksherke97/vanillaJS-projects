@@ -33,9 +33,9 @@ body {
 }
 
 .temperature-description {
-    margin: 10px;
+  margin: 10px;
   font-size: 20px;
-  }
+}
 
 .degree-section {
   display: flex;
@@ -51,3 +51,47 @@ body {
 .degree-section h2 {
   font-size: 40px;
 }
+
+.clock {
+  display: flex;
+  width: 10rem;
+  height: 10rem;
+  border: 10px solid white;
+  border-radius: 50%;
+  margin: 30px auto;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.hand {
+  width: 50%;
+  height: 3px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand {
+  width: 50%;
+  height: 3px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+
